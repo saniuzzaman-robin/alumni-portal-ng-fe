@@ -1,0 +1,31 @@
+<div class="event-card w-full" [ngStyle]="{ height: height }">
+	<div class="h-1/2 relative image-container">
+		<img
+			[src]="eventData.ThumbnailUrl"
+			alt="event thumbnail image"
+			class="h-full w-full" />
+		<div class="absolute event-date flex flex-col items-center">
+			<span>{{ eventData.StartDate | date : 'dd' }}</span>
+			<span>{{ eventData.StartDate | date : 'MMM' }}</span>
+		</div>
+	</div>
+	<div class="h-1/2 px-2 py-2 flex flex-col">
+		<h2 class="text-lg font-semibold mb-[2px]">{{ eventData.Title }}</h2>
+		<div class="flex flex-row gap-2 items-center">
+			<span class="event-icons"><mat-icon>event</mat-icon></span>
+			<div>
+				<span class="text-sm"
+					>{{ eventData.StartDate | date : 'short' }} -
+				</span>
+				<span class="text-sm">{{
+					eventData.EndDate | date : 'short'
+				}}</span>
+			</div>
+		</div>
+		<div class="flex flex-row gap-2 items-center">
+			<span class="event-icons"><mat-icon>location_on</mat-icon></span>
+			<span>{{ eventData.Location }}</span>
+		</div>
+		<span class="text-container"> {{ eventData.Description }}... </span>
+	</div>
+</div>

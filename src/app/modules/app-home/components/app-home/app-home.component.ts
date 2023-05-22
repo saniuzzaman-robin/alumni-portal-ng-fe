@@ -9,7 +9,7 @@ export class AppHomeComponent {
 	images = [
 		{
 			Name: 'First',
-			Url: 'https://img.freepik.com/free-vector/illustration-university-graduates_53876-28466.jpg?w=1060&t=st=1684753599~exp=1684754199~hmac=1a05bb36bc4e168c9778a195daab4395f41dcc5dea87a50e4ee6db431fa212f0',
+			Url: 'https://images.pexels.com/photos/15490405/pexels-photo-15490405/free-photo-of-alumni-standing-in-academic-dress.jpeg?auto=compress&cs=tinysrgb&w=600',
 		},
 		{
 			Name: 'Second',
@@ -24,4 +24,7 @@ export class AppHomeComponent {
 			Url: 'https://img.freepik.com/free-vector/illustration-university-graduates_53876-18433.jpg?w=1060&t=st=1684753876~exp=1684754476~hmac=32904a1cc54b12f0ba2daf1e5f6fb6a19410502630c0630ad28de58867c9481a',
 		},
 	];
+	onClickViewAll() {
+		console.log('clicked view all');
+	}
 }

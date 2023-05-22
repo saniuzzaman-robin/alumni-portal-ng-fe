@@ -26,7 +26,8 @@
 						"prefix": "app",
 						"style": "kebab-case"
 					}
-				]
+				],
+				"@angular-eslint/template/click-events-have-key-events": ["off"]
 			}
 		},
 		{
