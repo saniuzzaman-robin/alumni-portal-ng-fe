@@ -1,6 +1,17 @@
 <div class="app-home h-full px-4 md:px-16 lg:px-28">
 	<div class="carousel-container mt-6">
-		<app-carousel [slides]="images"></app-carousel>
+		<app-carousel [slides]="images">
+			<div class="flex top-1/2 w-full absolute justify-center items-end">
+				<button
+					mat-flat-button
+					color="primary"
+					class="text-white p-1"
+					mat-flat-button
+					(click)="goToUrl()">
+					Register
+				</button>
+			</div>
+		</app-carousel>
 	</div>
 	<div class="my-6">
 		<div class="upcoming-events flex flex-col">

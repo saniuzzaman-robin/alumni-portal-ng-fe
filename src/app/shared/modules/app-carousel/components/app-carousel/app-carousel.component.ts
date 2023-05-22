@@ -32,9 +32,6 @@ export class AppCarouselComponent implements OnInit {
 	@Input() indicators = true;
 	@Input() autoPlay = false;
 	@Input() autoPlayInterval = 5000;
-	@Input() registrationUrl =
-		'https://images.pexels.com/photos/15490405/pexels-photo-15490405/free-photo-of-alumni-standing-in-academic-dress.jpeg?auto=compress&cs=tinysrgb&w=600';
-
 	currentSlide = 0;
 	ngOnInit() {
 		this.preloadImages();

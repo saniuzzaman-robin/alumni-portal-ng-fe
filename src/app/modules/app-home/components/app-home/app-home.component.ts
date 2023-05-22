@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
 	selector: 'app-home',
 	templateUrl: './app-home.component.html',
 	styleUrls: ['./app-home.component.scss'],
 })
 export class AppHomeComponent {
+	constructor(private _router: Router) {}
 	images = [
 		{
 			Name: 'First',
@@ -26,5 +27,8 @@ export class AppHomeComponent {
 	];
 	onClickViewAll() {
 		console.log('clicked view all');
+	}
+	goToUrl() {
+		window.open('https://www.google.com/');
 	}
 }

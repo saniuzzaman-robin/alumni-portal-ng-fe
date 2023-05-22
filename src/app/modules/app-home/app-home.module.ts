@@ -5,6 +5,7 @@ import { Route, RouterModule } from '@angular/router';
 import { AppCarouselModule } from '../../shared/modules/app-carousel/app-carousel.module';
 import { AppSectionTitleComponent } from 'src/app/shared/components/app-section-title/app-section-title.component';
 import { AppEventCardComponent } from 'src/app/shared/components/app-event-card/app-event-card.component';
+import { MatButtonModule } from '@angular/material/button';
 
 const routes: Route[] = [
 	{
@@ -14,6 +15,13 @@ const routes: Route[] = [
 ];
 @NgModule({
 	declarations: [AppHomeComponent],
-	imports: [CommonModule, RouterModule.forChild(routes), AppCarouselModule, AppSectionTitleComponent, AppEventCardComponent],
+	imports: [
+		CommonModule,
+		RouterModule.forChild(routes),
+		AppCarouselModule,
+		AppSectionTitleComponent,
+		AppEventCardComponent,
+		MatButtonModule,
+	],
 })
 export class AppHomeModule {}

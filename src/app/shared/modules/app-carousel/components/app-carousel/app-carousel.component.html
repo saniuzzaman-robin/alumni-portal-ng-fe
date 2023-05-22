@@ -3,13 +3,11 @@
 <!-- eslint-disable @angular-eslint/template/alt-text -->
 <div class="carousel">
 	<ng-container *ngFor="let slide of slides; let i = index">
-		<a [href]="registrationUrl">
-			<img
-				*ngIf="i === currentSlide"
-				[src]="slide.Url"
-				class="slide"
-				@carouselAnimation />
-		</a>
+		<img
+			*ngIf="i === currentSlide"
+			[src]="slide.Url"
+			class="slide"
+			@carouselAnimation />
 	</ng-container>
 
 	<!-- controls -->
@@ -31,4 +29,5 @@
 				*ngFor="let slide of slides; let i = index"></li>
 		</ul>
 	</div>
+	<ng-content></ng-content>
 </div>
