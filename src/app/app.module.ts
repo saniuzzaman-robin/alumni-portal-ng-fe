@@ -8,12 +8,21 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppHeaderComponent } from './components/app-header/app-header.component';
+import { AppFooterComponent } from './components/app-footer/app-footer.component';
+import { MaterialModule } from './shared/modules/material/material.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
+library.add(fab);
 @NgModule({
-	declarations: [AppComponent],
+	declarations: [AppComponent, AppHeaderComponent, AppFooterComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
+		MaterialModule,
+		FontAwesomeModule,
 		BrowserAnimationsModule,
 		ServiceWorkerModule.register('ngsw-worker.js', {
 			enabled: !isDevMode(),

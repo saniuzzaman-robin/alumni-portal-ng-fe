@@ -1,0 +1,43 @@
+<div class="flex flex-col app-header relative">
+	<div
+		class="header__logo md:absolute text-white flex flex-col justify-center items-center px-6">
+		<p class="text-2xl">Comilla University</p>
+		<mat-divider class="border-white header__logo_divider"></mat-divider>
+		<p class="text-3xl header__logo_spaced">Alumni</p>
+	</div>
+	<div
+		class="header__social w-full h-8 pr-2 sm:pr-12 flex flex-row justify-end items-center gap-2 sm:gap-8">
+		<button>
+			<fa-icon class="text-white" [icon]="facebookIcon"></fa-icon>
+		</button>
+		<button>
+			<fa-icon class="text-white" [icon]="linkedinIcon"></fa-icon>
+		</button>
+		<button>
+			<fa-icon class="text-white" [icon]="twitterIcon"></fa-icon>
+		</button>
+		<button>
+			<mat-icon class="text-white text-lg pt-[2px]">search</mat-icon>
+		</button>
+		<button class="text-white text-xs">Alumni Directory</button>
+		<button class="text-white text-xs">Login</button>
+	</div>
+	<div
+		class="header__nav flex flex-row flex-wrap sm:gap-3 md:gap-8 justify-end md:items-center sm:px-10">
+		<button class="header__nav__item" mat-button routerLink="home">
+			Home
+		</button>
+		<button class="header__nav__item" mat-button routerLink="events">
+			Events
+		</button>
+		<button class="header__nav__item" mat-button routerLink="career">
+			Career
+		</button>
+		<button class="header__nav__item" mat-button routerLink="blog">
+			Blog
+		</button>
+		<button class="header__nav__item" mat-button routerLink="about-us">
+			About Us
+		</button>
+	</div>
+</div>

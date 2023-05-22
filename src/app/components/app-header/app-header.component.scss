@@ -1,0 +1,24 @@
+.app-header {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+}
+.header__social {
+	background: #002147;
+}
+.header__nav {
+	background: #0f1d58;
+	min-height: 48px;
+}
+.header__nav__item {
+	color: white !important;
+}
+.header__logo {
+	height: 80px;
+	background: #25357d;
+}
+.header__logo_divider {
+	width: 162px !important;
+}
+.header__logo_spaced {
+	letter-spacing: 12px !important;
+}
