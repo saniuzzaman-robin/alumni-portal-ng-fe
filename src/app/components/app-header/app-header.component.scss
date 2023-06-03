@@ -16,10 +16,18 @@
 .header__logo {
 	height: 80px;
 	background: #25357d;
+	animation-duration: 2s;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
 }
 .header__logo_divider {
 	width: 162px !important;
 }
 .header__logo_spaced {
 	letter-spacing: 12px !important;
+}
+.header__nav__item:first-child {
+	animation-duration: 1.5s;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
 }
