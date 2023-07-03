@@ -30,15 +30,15 @@ export class AppCarouselComponent implements OnInit {
 	@Input() arrowWidth = '16px';
 	@Input() arrowHeight = '16px';
 	@Input() indicators = true;
-	@Input() autoPlay = false;
-	@Input() autoPlayInterval = 5000;
+	@Input() autoPlay = true;
+	@Input() autoPlayInterval = 3500;
 	currentSlide = 0;
 	ngOnInit() {
 		this.preloadImages();
 		if (this.autoPlay) {
 			setInterval(() => {
 				this.currentSlide =
-					this.slides.length === this.currentSlide
+					this.slides.length === this.currentSlide + 1
 						? 0
 						: this.currentSlide + 1;
 			}, this.autoPlayInterval);
@@ -55,7 +55,7 @@ export class AppCarouselComponent implements OnInit {
 
 	onNextClick() {
 		const next = this.currentSlide + 1;
-		this.currentSlide = next === this.slides.length ? 0 : next;
+		this.currentSlide = next >= this.slides.length ? 0 : next;
 		console.log('next clicked, new current slide is: ', this.currentSlide);
 	}
 	preloadImages() {
